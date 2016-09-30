@@ -1,0 +1,3 @@
+add_lunch_combo anonymous-eng
+add_lunch_combo anonymous-user
+add_lunch_combo anonymous-userdebug
