@@ -1,6 +1,7 @@
 $(call inherit-product, device/linaro/pandaboard/pandaboard.mk)
 
-DEVICE_PACKAGE_OVERLAYS:=
+DEVICE_PACKAGE_OVERLAYS:=\
+    device/utbm/anonymous/overlay
 
 PRODUCT_NAME:= anonymous
 PRODUCT_DEVICE:= anonymous
