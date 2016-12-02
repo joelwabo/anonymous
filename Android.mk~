@@ -1,0 +1,12 @@
+commonsources := anonymous.c
+
+LOCAL_PATH := $(call my_dir)
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := $(commonsources)
+
+LOCAL_MODULE := libusb-1.0.9
+LOCAL_C_INCLUDES += \
+	$(LOCAL_PATH)/include\
+	$(LOCAL_PATH)/os
+LOCAL_MODULE_TAGS := optional

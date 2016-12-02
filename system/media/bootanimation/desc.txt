@@ -1,0 +1,2 @@
+800 400 30
+p 0 0 WalkingFingers

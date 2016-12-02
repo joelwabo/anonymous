@@ -5,6 +5,8 @@ DEVICE_PACKAGE_OVERLAYS:=\
 PRODUCT_COPY_FILES += \
 	device/utbm/anonymous/system/media/bootanimation.zip:/system/media/bootanimation.zip
 
+PRODUCT_PACKAGES += libusb-1.0.9
+
 PRODUCT_NAME:= anonymous
 PRODUCT_DEVICE:= anonymous
 PRODUCT_BRAND:= Android

@@ -1,0 +1,7 @@
+
+LOCAL_PATH := $(call my-dir)
+subdirs :=$(LOCAL_PATH)/$(libusb/Android.mk, \
+		libusb\
+)
+include $(subdirs)
+
