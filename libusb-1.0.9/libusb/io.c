@@ -30,19 +30,20 @@
 #include <sys/time.h>
 #endif
 
-/** #ifdef USBI_TIMERFD_AVAILABLE
-#include <sys/timerfd.h>
-#endif
-**/
+
+// #ifdef USBI_TIMERFD_AVAILABLE
+// #include <sys/timerfd.h>
+// #endif
 
 #include "libusbi.h"
 
-#define TIMESPEC_TO_TIMEVAL(tv, ts)                                     
-        do 
-	{                                                            
-                (tv)->tv_sec = (ts)->tv_sec;                            
-                (tv)->tv_usec = (ts)->tv_nsec / 1000;                   
-        } while (0);
+#ifndef TIMESPEC_TO_TIMEVAL
+#define TIMESPEC_TO_TIMEVAL(tv, ts)                                      \
+       do {                                                               \
+               (tv)->tv_sec = (ts)->tv_sec;                                \
+               (tv)->tv_usec = (ts)->tv_nsec / 1000;                        \
+       } while(0)
+#endif /* end of TIMESPEC_TO_TIMEVAL */
 
 /**
  * \page io Synchronous and asynchronous device I/O
@@ -2459,3 +2460,4 @@ void usbi_handle_disconnect(struct libusb_device_handle *handle)
 	}
 
 }
+

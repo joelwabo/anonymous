@@ -31,7 +31,7 @@
 #include <poll.h>
 #endif
 
-#include <libusb.h>
+#include "libusb.h"
 
 /* Inside the libusb code, mark all public functions as follows:
  *   return_type API_EXPORTED function_name(params) { ... }

@@ -1,1 +1,52 @@
-../x86_64-linux-gnu/sys/timerfd.h
+/* Copyright (C) 2008 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, write to the Free
+   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+   02111-1307 USA.  */
+
+#ifndef	_SYS_TIMERFD_H
+#define	_SYS_TIMERFD_H	1
+
+#include <time.h>
+
+
+/* Bits to be set in the FLAGS parameter of `timerfd_create'.  */
+enum
+  {
+    TFD_CLOEXEC = 02000000,
+#define TFD_CLOEXEC TFD_CLOEXEC
+    TFD_NONBLOCK = 04000
+#define TFD_NONBLOCK TFD_NONBLOCK
+  };
+
+
+/* Bits to be set in the FLAGS parameter of `timerfd_settime'.  */
+enum
+  {
+    TFD_TIMER_ABSTIME = 1 << 0
+#define TFD_TIMER_ABSTIME TFD_TIMER_ABSTIME
+  };
+
+
+
+
+extern int timerfd_create(clockid_t, int);
+extern int timerfd_settime(int, int, const struct itimerspec*,
+                           struct itimerspec*);
+extern int timerfd_gettime(int, struct itimerspec*);
+
+
+
+#endif /* sys/timerfd.h */

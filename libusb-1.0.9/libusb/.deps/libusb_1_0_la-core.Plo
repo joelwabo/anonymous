@@ -1,4 +1,4 @@
-libusb_1_0_la-core.lo: core.c ../config.h /usr/include/errno.h \
+libusb_1_0_la-core.lo: core.c config.h /usr/include/errno.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/bits/predefs.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -53,7 +53,7 @@ libusb_1_0_la-core.lo: core.c ../config.h /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h os/poll_posix.h
 
-../config.h:
+config.h:
 
 /usr/include/errno.h:
 

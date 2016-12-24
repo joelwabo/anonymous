@@ -5,7 +5,8 @@ DEVICE_PACKAGE_OVERLAYS:=\
 PRODUCT_COPY_FILES += \
 	device/utbm/anonymous/system/media/bootanimation.zip:/system/media/bootanimation.zip
 
-PRODUCT_PACKAGES += libusb
+PRODUCT_PACKAGES += libusb-lib
+PRODUCT_PACKAGES += libmlbin-jni
 
 PRODUCT_NAME:= anonymous
 PRODUCT_DEVICE:= anonymous
